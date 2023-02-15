@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="water_management_jasper" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="727f76f5-95be-422c-ac36-131f6c65b2d2">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="firstName" class="java.lang.String"/>
+	<field name="header" class="java.lang.String"/>
+	<field name="userId" class="java.lang.String"/>
+	<background>
+		<band height="802" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="801" uuid="7651e586-f21d-4add-bfbb-354ce3bc5291">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</rectangle>
+		</band>
+	</background>
+	<title>
+		<band height="111" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="81" width="170" height="30" uuid="57ddd700-f263-42d1-87cc-f91d0eb70edc"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[………………………Taluka                                                                                       ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="80" width="184" height="30" uuid="cebfe271-587d-4d4f-867c-28e556d84c7b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[………………………..District]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="555" height="80" uuid="a0ef3859-e755-454b-aa45-4dc6032b310d"/>
+				<imageExpression><![CDATA[$F{header}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="377" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="0" width="200" height="30" uuid="86bbb7e0-e965-4640-bad7-9618266b53ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Drinking water Management]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="30" width="200" height="30" uuid="cd67cce0-e839-4dc1-a050-b71aa1e0c0ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Acknowledgment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="60" width="70" height="30" uuid="2e020f6d-496b-449e-88f7-c72c55fd3cf2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Serial No:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="60" width="100" height="30" uuid="ec0a5e8e-c97f-461c-879c-dddc9d01b1c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{userId}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="40" height="30" uuid="7bd18cef-286c-40ff-942b-7396c0f24a6b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="50" y="0" width="40" height="30" uuid="764dedf4-639c-4d82-b826-2d0889549f2b"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="444" y="0" width="100" height="30" uuid="b79d148c-669b-4e95-8bb2-5d443e98091c"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

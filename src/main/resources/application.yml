@@ -1,0 +1,16 @@
+server:
+  port: 9002
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DB_HOST:127.0.0.1}:${DB_PORT:3306}/${DB_SCHEMA:jpa_relation}?serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:tatva123}
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true 
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
